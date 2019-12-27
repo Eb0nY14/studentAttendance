@@ -1,6 +1,6 @@
 package net.codejava;
 
-import org.junit.Test;
+/**import org.junit.Test; **/
 
 import static org.junit.Assert.*;
 
@@ -53,7 +53,7 @@ public class studentTest {
     @org.junit.Test
     public void lowAverage() {
         Student std = new Student();
-        assertEquals(Student.AttendanceGrade.AVERAGE, std.getAttendanceGrade(30));
+        assertEquals(Student.AttendanceGrade.POOR, std.getAttendanceGrade(30));
     }
 
     @org.junit.Test
