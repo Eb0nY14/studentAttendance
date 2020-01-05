@@ -14,25 +14,7 @@ pipeline {
             }
         }
 		
-		 post {
-		 
-			always {
-				deleteDir() /* clean up our workspace */
-        }
-		
-        success {
-            echo 'SUCCESS'
-        }
-		
-        unstable {
-            echo 'UNSTABLE'
-        }
-		
-        failure {
-            echo 'FAILED'
-        }
-		
-       }      
+		   
     }
  }       
 
