@@ -1,17 +1,22 @@
 pipeline {
-    agent any 
+    agent any
+    
+    tools {
+    	maven 'Maven3.6.3'
+    } 
     stages {
 		
         stage('Build') { 
             steps {
-                bat 'javac -cp "lib/*" Student.java studentTest.java'
+                bat 'mvn clean compile'
             }
         }
 		
-	stage('Test') {
-      		junit '**/target/surefire-reports/TEST-*.xml'
-      		archiveArtifacts 'target/*.jar'
-   	}  
+		stage('Test') {
+	      	steps {
+	      	   bat 'mvn test'
+	      	}
+	   	}  
     }
  }       
 
