@@ -4,7 +4,7 @@ pipeline {
 		
         stage('Build') { 
             steps {
-                bat 'javac Student.java studentTest.java'
+                bat 'javac -cp "lib/*" Student.java studentTest.java'
             }
         }
 		
