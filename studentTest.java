@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
  * Created by Christiana Temiola on 20/12/2019.
  */
 
-public class studentTest 
+public class studentTest {
     @org.junit.Test(expected = IllegalArgumentException.class)
     public void belowZero() throws Exception {
         Student std = new Student();
