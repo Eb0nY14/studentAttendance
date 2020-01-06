@@ -9,10 +9,9 @@ pipeline {
         }
 		
 	stage('Test') {
-	    steps {
-	    	bat 'java studentTest'
-	    }
-	}   
+      		junit '**/target/surefire-reports/TEST-*.xml'
+      		archiveArtifacts 'target/*.jar'
+   	}  
     }
  }       
 
