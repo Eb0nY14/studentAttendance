@@ -1,6 +1,8 @@
-package net.codejava;
+package chris;
 
-import org.junit.Test; 
+import org.junit.Test;
+
+import chris.Student;
 
 import static org.junit.Assert.*;
 
