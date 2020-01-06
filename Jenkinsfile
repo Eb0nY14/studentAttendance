@@ -8,7 +8,11 @@ pipeline {
             }
         }
 		
-		   
+	stage('Test') {
+	    steps {
+	    	bat 'java studentTest'
+	    }
+	}   
     }
  }       
 
